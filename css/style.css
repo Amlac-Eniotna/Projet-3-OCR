@@ -188,7 +188,7 @@ nav {
     z-index: 1;
 }
 
-/*filter*/
+/* filter */
 .filter-bar {
     display: flex;
     flex-direction: row;
@@ -197,6 +197,12 @@ nav {
 }
 
 .filter {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+
+.filter-button {
     font-size: 17px;
     font-weight: 700;
     display: flex;
@@ -211,7 +217,7 @@ nav {
     transition: background-color 0.25s;
 }
 
-.filter:hover {
+.filter-button:hover {
     background-color: #DEEBFF;
 }
 
@@ -295,7 +301,7 @@ nav {
 
 .populaires-cards .card {
     display: flex;
-    margin-top: 33px;
+    margin-top: 30px;
 }
 
 .populaires-cards img {
@@ -339,6 +345,7 @@ nav {
 .grille_activites {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 439px;
     gap: 30px;
 }
 
@@ -388,6 +395,7 @@ footer section {
 
     .hebergements {
         width: 100%;
+        margin-bottom: 0;
     }
 
     .populaires {
@@ -405,18 +413,48 @@ footer section {
         width: 30%;
     }
 
-    .populaires-cards .card-title {
-        font-size: 14px;
-    }
-
     .populaires-cards .card-subtitle {
         font-size: 13px;
     }
 
+    .populaires-cards .card {
+        display: flex;
+        margin-top: 20px;
+    }
+
+    /* image de carte plus fidele à la maquette */
+
+    /* .populaires-cards img {
+        width: 86.55px;
+    } */
+
     /* search & filter */
 
-    .filter p{
+    .filter-button p{
         font-size: 16px;
+    }
+
+    .filter-bar {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    /* actvités */
+    
+    .grille_activites {
+        grid-template-rows: 270px;
+    }
+
+    .grille_activites img {
+        height: 200px;
+    }
+
+    /* footer */
+
+    footer div {
+        gap: 20px;
     }
 }
 
@@ -424,7 +462,7 @@ footer section {
 @media (max-width: 767.98px) {
 
     main {
-        padding: 20px;
+        padding: 0px;
     }
 
     /* navbar */
@@ -439,7 +477,7 @@ footer section {
         width: 100%;
         height: 35px;
         grid-template-columns: 1fr 1fr;
-        padding: 0px 25px;
+        padding: 0px;
         text-align: center;
         gap: 0px;
     }
@@ -466,6 +504,11 @@ footer section {
     }
 
     /*search & filter*/
+
+    .search_and_filter {
+        padding: 0px 20px;
+    }
+
     .desktop-search {
         display: none;
     }
@@ -487,23 +530,98 @@ footer section {
         border-radius: 0 15px 15px 0;
     }
 
-    .filter-bar {
+    .filter {
+        width: 100%;
         display: grid;
         grid-template-columns: 1fr 1fr;
         row-gap: 20px;
         column-gap: 10px;
     }
 
-    .filter-bar h2 {
-        grid-row: 1;
-        grid-column: 1/3;
-    }
-
-    .filter p{
+    .filter-button p{
         font-size: 14px;
     }
 
-    .filter {
+    .filter-button {
         padding: 4px 19px;
+    }
+
+    /* hebergements et populaire */
+    
+    .hebergements-and-populaires {
+        flex-direction: column-reverse;
+        margin-bottom: 35px;
+    }
+
+    .hebergements-and-populaires section {
+        border-radius: 0;
+    }
+
+    .hebergements-and-populaires .populaires {
+        padding: 30px 20px;
+    }
+
+    /* populaires */
+
+    .populaires {
+        margin-top: 0px;
+        margin-bottom: 15px;
+    }
+
+    .populaires-cards {
+        display: unset;
+    }
+
+    .populaires-cards .card {
+        margin-top: 15px;
+    }
+
+    /* image de carte plus fidele à la maquette */
+
+    /* .populaires-cards img {
+        width: 106.66px;
+    } */
+
+    /* hebergements */
+
+    .hebergements {
+        gap: 15px;
+    }
+
+    .hebergements-and-populaires .hebergements {
+        padding: 20px;
+        background-color: white;
+    }
+    
+    .hebergements-cards {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    /* activites */
+
+    .grille_activites {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .grille_activites .card img {
+        height: 141px;
+    }
+
+    /* footer */
+
+    footer,
+    footer section {
+        padding: 0px;
+    }
+
+    .color-footer {
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+        padding: 30px;
     }
 }
