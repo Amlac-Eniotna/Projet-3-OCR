@@ -247,6 +247,10 @@ nav {
     box-sizing: border-box;
 }
 
+.hebergements-cards {
+    width: 100%;
+}
+
 .card-subtitle {
     font-size: 14px;
 }
@@ -262,7 +266,7 @@ nav {
 
 .hebergements-cards {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, calc(33% - 18px));
     grid-gap: 30px;
 }
 
@@ -351,6 +355,8 @@ nav {
 
 .grille-activites .card {
     padding: 0px;
+    display: flex;
+    flex-direction: column;
 }
 
 .grille-activites img {
@@ -360,7 +366,11 @@ nav {
 }
 
 .grille-activites .card h3 {
-    padding: 20px 19px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 59px;
+    padding: 0 19px;
 }
 
 /* footer */
@@ -542,6 +552,9 @@ footer section {
         padding: 4px 19px;
     }
 
+    .search-bar {
+        width: 100%;
+    }
     /* hebergements et populaire */
     
     .hebergements-and-populaires {
