@@ -197,7 +197,7 @@ nav {
 .filter-bar {
     display: flex;
     flex-direction: row;
-    gap: 15px;
+    column-gap: 15px;
     align-items: center;
 }
 
@@ -412,10 +412,9 @@ footer section {
     }
 
     .filter-bar {
-        display: flex;
         flex-direction: column;
         align-items: flex-start;
-        gap: 20px;
+        row-gap: 20px;
     }
 
     /* hebergements & populaires */
@@ -445,7 +444,6 @@ footer section {
     }
 
     .populaires-cards .card {
-        display: flex;
         margin-top: 20px;
     }
 
@@ -475,7 +473,6 @@ footer section {
 
     /* navbar */
     nav {
-        display: flex;
         flex-direction: column;
         align-items: center;
     }
