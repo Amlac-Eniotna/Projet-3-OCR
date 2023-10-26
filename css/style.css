@@ -247,6 +247,10 @@ nav {
     box-sizing: border-box;
 }
 
+.card-subtitle {
+    font-size: 14px;
+}
+
 /****** Hebergements ***********/
 .hebergements {
     width: 65%;
@@ -323,10 +327,6 @@ nav {
 .populaires-cards .card-title {
     margin-top: 10px;
     margin-bottom: 4px;
-}
-
-.populaires-cards .card-subtitle {
-    margin: 0;
 }
 
 .populaires-cards .card-rating {
@@ -411,10 +411,6 @@ footer section {
 
     .populaires-cards a {
         width: 30%;
-    }
-
-    .populaires-cards .card-subtitle {
-        font-size: 13px;
     }
 
     .populaires-cards .card {
