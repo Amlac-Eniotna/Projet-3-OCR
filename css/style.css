@@ -66,7 +66,7 @@ section {
     margin-bottom: 35px;
 }
 
-.bar-and-footer-titles {
+.filter-and-footer-titles {
     font-size: 18px;
     font-weight: 700;
 }
@@ -140,6 +140,14 @@ nav {
 }
 
 .search-bar .fa-location-dot {
+    color: black;
+}
+
+.search-bar .fa-magnifying-glass {
+    color: white;
+}
+
+.search-bar .fa-location-dot {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -149,7 +157,7 @@ nav {
     border-radius: 15px 0 0 15px;
 }
 
-.search-bar input[type="search"] {
+.search-bar #search {
     height: 49px;
     padding: 0 24px;
     border: solid #F2F2F2 1px;
@@ -177,10 +185,7 @@ nav {
     display: none;
     background-color: #0065FC;
     font-size: 18px;
-    font-weight: 700;
-    text-align: center;
-    color: white;
-    height: 48px;
+    height: 49px;
     border: none;
     padding: 15px 16px;
     border-radius: 15px 15px 15px 15px;
@@ -228,7 +233,7 @@ nav {
     gap: 10px;
 }
 
-.info-bar i {
+.info-bar .fa-solid {
     border: solid #D9D9D9 1px;
     padding: 12px 10px;
     border-radius: 50%;
@@ -287,7 +292,7 @@ nav {
 }
 
 
-.hebergements-cards .card img {
+.hebergements-cards img {
     height: 114px;
     border-radius: 20px 20px 0 0;
 }
@@ -365,7 +370,7 @@ nav {
     border-radius: 20px 20px 0 0;
 }
 
-.grille-activites .card h3 {
+.grille-activites .card-title {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -399,6 +404,22 @@ footer section {
 /****** Media queries ***********/
 /* Medium devices (tablets, less/equal than 1024px) */
 @media (max-width: 1024px) {
+    
+    /* search & filter */
+
+    .filter-button{
+        font-size: 16px;
+    }
+
+    .filter-bar {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    /* hebergements & populaires */
+
     .hebergements-and-populaires {
         flex-direction: column;
     }
@@ -428,25 +449,6 @@ footer section {
         margin-top: 20px;
     }
 
-    /* image de carte plus fidele à la maquette */
-
-    /* .populaires-cards img {
-        width: 86.55px;
-    } */
-
-    /* search & filter */
-
-    .filter-button p{
-        font-size: 16px;
-    }
-
-    .filter-bar {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 20px;
-    }
-
     /* actvités */
     
     .grille-activites {
@@ -459,7 +461,7 @@ footer section {
 
     /* footer */
 
-    footer div {
+    footer .color-footer {
         gap: 20px;
     }
 }
@@ -522,19 +524,22 @@ footer section {
     .mobile-search {
         display: unset;
         z-index: 1;
+        position: relative;
+        top: -1px;
     }
 
-    .search-bar input {
-        border-left: none;
+    .search-bar #search {
         width: 100%;
     }
 
     .border-button {
-        height: 48px;
+        height: 47px;
         border-top: solid #F2F2F2 1px;
         border-bottom: solid #F2F2F2 1px;
         border-radius: 0 15px 15px 0;
     }
+
+    /* filter */
 
     .filter {
         width: 100%;
@@ -544,17 +549,11 @@ footer section {
         column-gap: 10px;
     }
 
-    .filter-button p{
-        font-size: 14px;
-    }
-
     .filter-button {
         padding: 4px 19px;
+        font-size: 14px;
     }
-
-    .search-bar {
-        width: 100%;
-    }
+    
     /* hebergements et populaire */
     
     .hebergements-and-populaires {
@@ -568,14 +567,11 @@ footer section {
 
     .hebergements-and-populaires .populaires {
         padding: 30px 20px;
-    }
-
-    /* populaires */
-
-    .populaires {
         margin-top: 0px;
         margin-bottom: 15px;
     }
+
+    /* populaires */
 
     .populaires-cards {
         display: unset;
@@ -585,21 +581,12 @@ footer section {
         margin-top: 15px;
     }
 
-    /* image de carte plus fidele à la maquette */
-
-    /* .populaires-cards img {
-        width: 106.66px;
-    } */
-
     /* hebergements */
-
-    .hebergements {
-        gap: 15px;
-    }
 
     .hebergements-and-populaires .hebergements {
         padding: 20px;
         background-color: white;
+        gap: 15px;
     }
     
     .hebergements-cards {
@@ -616,14 +603,14 @@ footer section {
         gap: 15px;
     }
 
-    .grille-activites .card img {
+    .grille-activites img {
         height: 141px;
     }
 
     /* footer */
 
     footer,
-    footer section {
+    footer .menu-footer {
         padding: 0px;
     }
 
