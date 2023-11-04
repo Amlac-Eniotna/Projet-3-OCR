@@ -18,7 +18,7 @@ body {
     display: flex;
     justify-content: center;
 }
-
+ 
 .main-container {
     width: 100%;
     max-width: 1440px;
@@ -73,7 +73,7 @@ section {
 
 /* navbar */
 
-nav {
+.nav-bar {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -179,6 +179,7 @@ nav {
     padding: 15px 16px;
     border-radius: 0 15px 15px 0;
     z-index: 1;
+    cursor: pointer;
 }
 
 .mobile-search {
@@ -191,9 +192,11 @@ nav {
     border-radius: 15px 15px 15px 15px;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     z-index: 1;
+    cursor: pointer;
 }
 
 /* filter */
+
 .filter-bar {
     display: flex;
     flex-direction: row;
@@ -204,18 +207,20 @@ nav {
 .filter {
     display: flex;
     flex-direction: row;
+    padding: 0;
     gap: 15px;
 }
 
 .filter-button {
+    cursor: pointer;
     font-size: 17px;
     font-weight: 700;
     display: flex;
     flex-direction: row;
-    gap: 10px;
     align-items: center;
     border: 2px solid #D9D9D9;
     height: 42px;
+    gap: 10px;
     padding: 4px 19px;
     border-radius: 26px;
     background-color: white;
@@ -291,14 +296,19 @@ nav {
     margin-bottom: 8px;
 }
 
+.hebergements .card-title {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
 
 .hebergements-cards img {
     height: 114px;
     border-radius: 20px 20px 0 0;
 }
 
-.hebergements-cards .bar-and-footer-titles {
-    display: flex;
+.more-hebergement {
+    cursor: pointer;
 }
 
 /****** Populaires ***********/
@@ -437,10 +447,11 @@ footer section {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+        gap: 20px;
     }
 
     .populaires-cards a {
-        width: 30%;
+        width: 100%;
     }
 
     .populaires-cards .card {
@@ -451,6 +462,7 @@ footer section {
     
     .grille-activites {
         grid-template-rows: 270px;
+        gap: 3.4%;
     }
 
     .grille-activites img {
@@ -472,7 +484,7 @@ footer section {
     }
 
     /* navbar */
-    nav {
+    .nav-bar {
         flex-direction: column;
         align-items: center;
     }
@@ -547,8 +559,14 @@ footer section {
     }
 
     .filter-button {
-        padding: 4px 19px;
         font-size: 14px;
+        overflow: hidden;
+    }
+
+    .filter-button p {
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
     }
     
     /* hebergements et populaire */
