@@ -111,8 +111,9 @@ section {
 
 .unselect-nav {
     padding-top: 14px;
-    border-top: solid rgba(0, 101, 252, 0) 2px;
+    border-top: solid rgba(242, 242, 242, 0) 2px;
     transition: border-top 0.25s;
+    border-bottom: rgba(242, 242, 242, 0);
 }
 
 .unselect-nav:hover {
@@ -508,11 +509,11 @@ footer section {
     }
     
     .unselect-nav {
+        border-bottom: solid rgba(242, 242, 242, 1) 2px ;
         padding-top: 0px;
         padding-bottom: 14px;
-        border-bottom: solid rgba(0, 101, 252, 0) 2px;
-        transition: border-top 0.25s;
-        border-top: none;
+        border-top: rgba(0, 101, 252, 0);
+        transition: border-bottom 0.25s;
     }
     
     .unselect-nav:hover {
